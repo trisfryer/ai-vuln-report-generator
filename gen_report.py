@@ -5,7 +5,7 @@ import logging
 from vulnerability_scanner import (
     configure_logging,
     is_web_server_responsive,
-    run_sslscan_raw,
+    run_testssl_raw,
     run_nmap_raw,
     run_nikto_raw,
     run_whatweb_raw,
@@ -44,21 +44,21 @@ def main():
     }
 
     # Initialize variables for raw outputs
-    sslscan_data = ""
+    testssl_data = ""
     nikto_data = ""
     whatweb_data = ""
     gobuster_data = ""
 
-    # Run SSLScan if necessary
+    # Run testssl if necessary
     if scans_to_run['ssl']:
-        print("\nRunning SSLScan (testssl.sh)...")
-        sslscan_data = run_sslscan_raw(host)
-        if not sslscan_data:
-            print("SSLScan failed.")
+        print("\nRunning testssl (testssl.sh)...")
+        testssl_data = run_testssl_raw(host)
+        if not testssl_data:
+            print("testssl failed.")
         else:
-            print("SSLScan completed successfully.")
+            print("testssl completed successfully.")
     else:
-        print("\nSSL not detected. Skipping SSLScan.")
+        print("\nSSL not detected. Skipping testssl.")
 
     # Run web-related scans if necessary
     if scans_to_run['web'] and is_web_server_responsive(host):
@@ -87,7 +87,7 @@ def main():
 
     # Prepare raw data sections
     print("\nPreparing raw data for GPT-4 analysis...")
-    raw_data_sections = prepare_raw_data(nmap_data, nikto_data, whatweb_data, gobuster_data, sslscan_data)
+    raw_data_sections = prepare_raw_data(nmap_data, nikto_data, whatweb_data, gobuster_data, testssl_data)
 
     # Initialize a list to hold all vulnerabilities
     all_vulnerabilities = []

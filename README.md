@@ -117,7 +117,9 @@ The script will perform the following steps:
 4. AI Analysis: Sends the raw data to GPT-4 to extract vulnerabilities and generate the report.
 5. Generate Report: Saves the comprehensive vulnerability report in Markdown format.
 
-The report will be saved as vulnerability*report*<target_host>.md.
+The report will be saved as vulnerability_report_<target_host>.md.
+
+Below is a screenshot of the code output after successfuling running a scan and generating report
 
 ![Screenshot of the code output after successfuling running a scan and generating report](/images/script.png)
 

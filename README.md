@@ -133,12 +133,16 @@ The report will be saved as vulnerability*report*<target_host>.md.
 
 ### Example Output
 
-Two examples of generated reports can be found in the examples directory. The reports include:
+Two examples of generated reports are included in this repository. The reports include:
 
 - Overview: A summary of the overall security posture.
 - Vulnerability Findings: A detailed table of vulnerabilities with their impact (rating and description), likelihood (rating and description), and remediation steps.
 
-The two scans were run against [HackTheBox SolarLab](https://app.hackthebox.com/machines/SolarLab) ([vulnerability_report_solarlab.htb.md](Examples/vulnerability_report_solarlab.htb.md) and [HackTheBox Sea](https://app.hackthebox.com/machines/Sea) ([vulnerability_report_10.10.11.28.md](Examples/vulnerability_report_10.10.11.28.md)
+The two scans were run against [HackTheBox SolarLab](https://app.hackthebox.com/machines/SolarLab) and [HackTheBox Sea](https://app.hackthebox.com/machines/Sea).
+
+They can be found here:
+- [vulnerability_report_solarlab.htb.md](Examples/vulnerability_report_solarlab.htb.md)
+- [vulnerability_report_10.10.11.28.md](Examples/vulnerability_report_10.10.11.28.md)
 
 ## Notes
 

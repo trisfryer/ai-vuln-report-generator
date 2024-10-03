@@ -36,7 +36,7 @@ This tool automates the process of scanning a target host for vulnerabilities an
 1. Clone the Repository:
 
 ```
-git clone https://github.com/exampleuser/ai-vuln-report-generator.git
+git clone https://github.com/trisfryer/ai-vuln-report-generator.git
 cd ai-vuln-report-generator
 ```
 

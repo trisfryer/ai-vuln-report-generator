@@ -4,7 +4,7 @@ A Python tool that automates vulnerability scanning of a target host using vario
 
 ## Overview
 
-This tool automates the process of scanning a target host for vulnerabilities and generates a detailed report using AI. It integrates traditional scanning tools with OpenAI's GPT-4 to analyze scan results and present findings in a professional report format.
+This tool automates the process of scanning a target host for vulnerabilities and generates a detailed report using AI. It integrates traditional scanning tools with OpenAI's GPT-4 to analyse scan results and present findings in a professional report format.
 
 ## Features
 
@@ -14,10 +14,20 @@ This tool automates the process of scanning a target host for vulnerabilities an
   - WhatWeb: For website fingerprinting.
   - Gobuster: For directory and file brute-forcing.
   - testssl.sh: For SSL/TLS scanning (if SSL is detected).
-- AI-Powered Analysis: Uses OpenAI's GPT-4 API to analyze raw scan outputs and extract vulnerabilities.
+- AI-Powered Analysis: Uses OpenAI's GPT-4 API to analyse raw scan outputs and extract vulnerabilities.
 - Comprehensive Reports: Generates detailed vulnerability reports in Markdown format, including an overview, detailed findings, and remediation recommendations.
 - Error Handling: Robust error handling and logging mechanisms.
 - Debugging Support: Saves intermediate data and logs for troubleshooting.
+
+## How AI is Used
+The core innovation of this tool lies in its AI-powered analysis. After collecting raw outputs from the scanning tools, the script sends this data to OpenAI's GPT-4 model. The AI processes the information by:
+  - Interpreting Raw Data: Converts unstructured scan outputs into structured information.
+  - Extracting Vulnerabilities: Identifies potential security issues from the scan results.
+  - Assessing Impact and Likelihood: Evaluates the severity and risk associated with each vulnerability.
+  - Recommending Remediations: Provides practical solutions to address each identified issue.
+  - Formatting the Report: Organises the findings into a clear and professional report, suitable for stakeholders.
+
+By leveraging GPT-4's advanced language understanding and generation capabilities, the tool delivers insights that would typically require manual analysis by a security expert.
 
 ## Prerequisites
 
@@ -148,15 +158,15 @@ They can be found here:
 
 ## Notes
 
-- Permissions: Ensure you have legal authorization to scan the target host. Unauthorized scanning is illegal and unethical.
+- Permissions: Ensure you have legal authorisation to scan the target host. Unauthorised scanning is illegal and unethical.
 - OpenAI API Costs: Using the GPT-4 API incurs costs. Monitor your usage and set up billing limits as necessary.
 - Error Handling: Logs are saved in the debug_data directory to help troubleshoot any issues.
 - Debug Data: Intermediate data and GPT-4 responses are saved for debugging purposes.
-- Customizable Prompts: The script uses prompts designed to extract detailed vulnerability information. You can adjust the prompts in vulnerability_scanner.py if needed.
-- Modifying the Script: Feel free to customize the script to suit your needs, such as adding more scanning tools or adjusting the report format.
+- Customisable Prompts: The script uses prompts designed to extract detailed vulnerability information. You can adjust the prompts in vulnerability_scanner.py if needed.
+- Modifying the Script: Feel free to customise the script to suit your needs, such as adding more scanning tools or adjusting the report format.
 
 ## Disclaimer
 
-This tool is intended for educational and authorized security testing purposes only. Unauthorized use of this tool to scan systems without explicit permission is illegal and unethical.
+This tool is intended for educational and authorised security testing purposes only. Unauthorised use of this tool to scan systems without explicit permission is illegal and unethical.
 
-The developers are not responsible for any misuse of this tool. Always ensure you have proper authorization before conducting any scans.
+The developers are not responsible for any misuse of this tool. Always ensure you have proper authorisation before conducting any scans.
